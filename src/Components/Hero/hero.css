@@ -1,0 +1,71 @@
+.hero-section {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.display-4 {
+  margin-bottom: 1rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.zoom-container {
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center; 
+  height: 100%; 
+  overflow: hidden; /* Contain the zoom effect */
+}
+
+.zoom-container img {
+  animation: zoom 10s infinite alternate; /* Apply the zoom animation */
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1); 
+  }
+}
+
+/* hero.css */
+
+.hero-section {
+  position: relative; /* Ensure the section is positioned relative for child elements */
+  overflow: hidden;   /* Hide any overflow from child elements */
+}
+
+.hero-section video {
+  position: absolute; /* Position video absolutely to cover the background */
+  top: 0;
+  left: 0;
+  width: 100vw;       /* Set width to 100% of the viewport width */
+  height: 100vh;      /* Set height to 100% of the viewport height */
+  object-fit: cover;  /* Make sure the video covers the container without distortion */
+  z-index: -1;        /* Place video behind other content */
+}
+
+.container-fluid {
+  position: relative; /* Ensure container is positioned relative for stacking context */
+  z-index: 1;         /* Ensure container content is above the video */
+}
+
+.zoom-container img {
+  width: 100%;        /* Ensure the image inside the zoom container scales correctly */
+  height: auto;       /* Maintain aspect ratio of the image */
+}
+
+

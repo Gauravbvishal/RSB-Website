@@ -1,0 +1,175 @@
+
+body {
+  background-color: #000; 
+  color: #fff; 
+  margin: 5px;
+  font-family: Arial, sans-serif; 
+}
+
+
+#header {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px 20px;
+  /* border: 0.2px solid;  */
+  border-radius: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem; 
+  font-family: 'Arial', sans-serif; 
+  color: rgb(255, 255, 255); 
+  text-transform: uppercase; 
+  text-decoration: none; 
+  transition: transform 0.4s ease; 
+  font-stretch: 150%;
+}
+
+.logo:hover {
+  transform: scale(1.1); 
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  margin: 0;
+  width: 100%;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: #fff; 
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.navbar a:hover,
+.navbar li.active a {
+  color: #ff0000; 
+}
+
+/* Custom Button Styles */
+.custom-button {
+  background-color: #e510ec; 
+  color: #fff; 
+  border-radius: 60px; 
+  font-size: 16px; 
+  font-weight: 500; 
+  padding: 10px 20px; 
+  border:#e510ec;
+  text-align: center; 
+  max-width: 200px; 
+  white-space: nowrap; 
+}
+
+.custom-button:hover {
+  background-color: #e510ec; 
+}
+
+/* Mobile Navigation Toggle Styles */
+.mobile-nav-toggle {
+  display: none; /* Hide toggle by default */
+  font-size: 24px; /* Adjust icon size */
+  color: #fff; /* Icon color */
+  cursor: pointer; /* Show pointer cursor */
+  z-index: 1001; /* Ensure toggle is on top */
+  background-color: #a80772; /* Visible background color */
+  border-radius: 50%; /* Rounded shape */
+  padding: 10px; /* Add padding around icon */
+  text-align: center; /* Center icon */
+  width: 40px; /* Adjust width */
+  height: 40px; /* Adjust height */
+  line-height: 40px; /* Center icon vertically */
+}
+
+.mobile-nav-toggle i {
+  font-size: 20px; /* Adjust icon size */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none; 
+    flex-direction: column;
+    width: 100%; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: rgba(0,0,0); /* Background with opacity */
+    padding: 10px 0; 
+    z-index: 1000; 
+  }
+
+  .navbar.active {
+    display: flex; 
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%; 
+  }
+
+  .navbar li {
+    margin: 10px 0; 
+  }
+
+  .custom-button {
+    display: none; 
+  }
+
+  .mobile-nav-toggle {
+    display: block; 
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar {
+    display: flex; 
+  }
+
+  .mobile-nav-toggle {
+    display: none; 
+  }
+}
+
+
+@media (max-width: 767px) {
+  .header .d-md-flex {
+    display: none; /* Hide desktop navigation on mobile screens */
+  }
+}
