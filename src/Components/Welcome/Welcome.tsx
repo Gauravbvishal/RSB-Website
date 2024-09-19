@@ -6,7 +6,7 @@ const people = [
   { id: 1, name: "Mr. Sambit Biswal", designation: "Founder and CEO", image: "/assets/img/team-1.jpeg" },
   { id: 2, name: "Mr. Soumya Mohanty", designation: "Chief Technology Officer", image: "/assets/img/team-2.jpg" },
   { id: 3, name: "Mr. Bobby Garcia", designation: "Chief Advisory Consultant", image: "/assets/img/team-3.png" },
-  { id: 4, name: "Ms. Sruthi Vijayaraghavan", designation: "Chief Strategy Officer", image: "/assets/img/team-4.jpg" },
+  // { id: 4, name: "Ms. Sruthi Vijayaraghavan", designation: "Chief Strategy Officer", image: "/assets/img/team-4.jpg" },
   { id: 5, name: "Mr. Anzin Saifuddin", designation: "Director Coding and Compliances", image: "/assets/img/team-5.png" },
   { id: 6, name: "Mr. Rajeev Kukade", designation: "Business Strategy and Control", image: "/assets/img/team-6.png" },
 ];

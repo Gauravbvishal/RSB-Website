@@ -38,7 +38,7 @@ const config: Config = {
         rainbowBorder: 'rainbowBorder 5s linear infinite',
         zoomInOut: 'zoomInOut 0.5s ease-in-out',
         // Include previously defined animations
-        'pop-up': 'pop-up 1s ease-out forwards',
+        'pop-up': 'pop-up 4s ease-out forwards',
         shake: 'shake 0.5s ease-in-out infinite',
       },
       keyframes: {

@@ -11,7 +11,7 @@ export default function Footer() {
             className="w-3/4 md:w-1/2 h-auto object-cover animate-zoom"
           />
         </div>
-        <div className="w-full md:w-1/4 flex items-center justify-center p-4">
+        <div className="w-full md:w-1/4 flex items-center justify-center">
           <div className=" rounded-lg max-w-full md:max-w-xs w-full">
             <h2 className="text-lg font-semibold p-2">Services</h2>
             <ul className="text-sm md:text-base leading-relaxed p-2">

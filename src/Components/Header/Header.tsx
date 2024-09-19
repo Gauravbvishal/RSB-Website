@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { FaPhone, FaBars, FaTimes } from 'react-icons/fa';
@@ -6,14 +6,16 @@ import './Header.css';
 import Nav from './Nav';
 import { useRouter } from 'next/navigation'; 
 
-export default function Header() {
+const Header: React.FC = () => {
   const [on, setOn] = useState(false);
   const router = useRouter(); 
 
   const handleToggleMenu = () => {
-    setOn(!on);
-    let body: HTMLElement | any = document.querySelector('body');
-    body.classList.toggle('mobile-nav-active');
+    setOn(prev => !prev);
+    const body = document.querySelector('body') as HTMLBodyElement | null;
+    if (body) {
+      body.classList.toggle('mobile-nav-active');
+    }
   };
 
   const handleContactUsClick = () => {
@@ -28,7 +30,7 @@ export default function Header() {
         </a>
         <Nav className={on ? 'd-flex' : 'd-none d-md-flex'} />
         <button 
-          className="custom-button btn btn-primary d-none d-md-block"
+          className="custom-button btn bg-purple-600 d-none d-md-block"
           onClick={handleContactUsClick} 
         >
           Contact Us
@@ -41,7 +43,6 @@ export default function Header() {
         </button>
       </div>
       
-      
       <nav className={`mobile-nav d-md-none ${on ? 'd-block' : 'd-none'}`}>
         <Nav className='d-flex flex-column' />
         <button 
@@ -53,4 +54,6 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+};
+
+export default Header;
