@@ -13,4 +13,7 @@
   .animate-zoom {
     animation: zoom 10s ease-in-out infinite;
   }
+  body{
+    background-color: black;
+  }
   

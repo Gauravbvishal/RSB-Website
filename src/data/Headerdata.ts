@@ -35,5 +35,11 @@ export const navs = [
     link: '/Resources',
     active: false,
   },
+  {
+    id: '5',
+    name: 'Contact Us',
+    link: '/ContactUs',
+    active: false,
+  },
   
 ];

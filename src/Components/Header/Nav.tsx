@@ -13,7 +13,7 @@ const Nav: React.FC<NavProps> = ({ className }) => {
     <nav id='navbar' className={`navbar ${className}`}>
       <ul className="flex flex-col md:flex-row">
         {navs.map(nav => (
-          <Link href={nav.link} className="py-2 px-4 hover: text-red no-underline">
+          <Link href={nav.link} className="py-2 px-4 hover: text-red no-underline font-stylish4">
           {nav.name}
         </Link>
 

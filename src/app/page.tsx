@@ -1,17 +1,18 @@
 
-import Hero from "@/Components/Hero/Hero";
+// import Hero from "@/Components/Hero/Hero";
+import { CombinedVortexComponent } from "@/Components/Hero/Hero";
 import OurMission from "@/Components/OurMission/Ourmission";
 
 import { AnimatedTooltipPreview } from "@/Components/Welcome/Welcome";
-import WhyChoose from "@/Components/Whychoese/Whychoese";
+import  { InfiniteMovingCardsDemo } from "@/Components/Whychoese/Whychoese";
 
 
 export default function Home() {
   return (
   <>
-  <Hero></Hero>
+  <CombinedVortexComponent></CombinedVortexComponent>
   <AnimatedTooltipPreview></AnimatedTooltipPreview>
-  <WhyChoose></WhyChoose> 
+  <InfiniteMovingCardsDemo></InfiniteMovingCardsDemo>
   <OurMission></OurMission>
 </>
  
